@@ -2,6 +2,8 @@ let continueButton, bedButton, giveupButton;
 let title;
 let morning;
 let sparkle;
+let sparkle2;
+let start;
 
 function setup() {
     createCanvas('fullscreen');
@@ -14,6 +16,12 @@ function setup() {
 
     sparkle = new Sprite ();
     sparkle.img = 'assets/sparkle.png'
+
+    sparkle2 = new Sprite ();
+    sparkle2.img = 'assets/sparkle2.png'
+
+    start = new Sprite ();
+    start.img = 'assets/start.png'
     
 
     continueButton = new Sprite(475,height/2+200, 100,50);
@@ -35,8 +43,6 @@ function setup() {
 
 function draw() {
     clear();
-    textSize(18);
-    text("start your day using the buttons below", 250,height/2+150);
 
     title.scale = 1.30;
     title.x = 550;
@@ -48,12 +54,19 @@ function draw() {
     sparkle.x = 50;
     sparkle.y = 220;
 
+    sparkle2.scale = .10
+    sparkle2.x = 790
+    sparkle2.y = 190
+
+    start.scale = .20
+    start.x = 400
+    start.y = 600
 
     if (continueButton.mouse.pressed())
         location.replace("continue.html")
     
     if (bedButton.mouse.pressed())
-        location.replace("bed.html")
+        location.replace("gameover.html")
 
     if (giveupButton.mouse.pressed())
         location.replace("gameover.html")

@@ -1,22 +1,27 @@
-let avatar;
-let tileImg
+let me;
+let caption;
+
+function preload() {
+    
+}
 
 
 function setup() {
-    new Canvas("fullscreen");
-    avatar = new Sprite(width/2,height/2,128,128,'s');
+    createCanvas('fullscreen');
+
+    me = new Sprite ();
+    me.img = 'assets/me.png';
+    me.scale = .07
+
+    caption = new Sprite ();
+    caption.img = 'assets/caption.png';
+    caption.scale = .40
+    caption.x = 425
+    caption.y = 100
+
 
 }
 
 function draw() {
     clear();
-
-    text("lets just see how today goes...",300,30);
-    textSize(20);
-    
-
-}
-
-function keyReleased() {
-    new Sprite(width/2,-15,30,30);
 }
