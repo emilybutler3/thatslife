@@ -54,6 +54,8 @@ function draw() {
     sparkle.x = 50;
     sparkle.y = 220;
 
+    sparkle.rotation = 45;
+
     sparkle2.scale = .10
     sparkle2.x = 790
     sparkle2.y = 190
