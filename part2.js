@@ -1,6 +1,6 @@
 let girl;
 let caption;
-let menuButton;
+// let menuButton;
 let sprite;
 let avoid;
 
@@ -15,7 +15,7 @@ function setup() {
 
     girl = new Sprite();
     girl.img = 'assets/me.png';
-    girl.scale = .08
+    girl.scale = .15
     girl.x = 425
     girl.y = 230
 
@@ -32,9 +32,9 @@ function setup() {
     avoid.y = 120
 
 
-    menuButton = new Sprite (425,height/2-300, 100,30);
-    menuButton.color = "#F238A8";
-    menuButton.text = "MENU";
+    // menuButton = new Sprite (425,height/2-300, 100,30);
+    // menuButton.color = "#F238A8";
+    // menuButton.text = "MENU";
 
     // row 1 squares
     sprite = new Sprite();
@@ -376,7 +376,7 @@ function setup() {
     sprite = new Sprite();
     sprite.width = 50;
     sprite.height = 50;
-    sprite.x = 475
+    sprite.x = 460
     sprite.y = 800
 
     sprite = new Sprite();
@@ -415,7 +415,13 @@ function draw() {
     girl.x = mouse.x;
     girl.y = mouse.y;
 
-    if (menuButton.mouse.pressed())
-    location.replace("index.html");
+    // girl.moveTowards(mouse);
+
+    // if (girl.overlaps(allSprites)) allSprites.remove();
+
+    if (girl.collides(allSprites)) allSprites.remove();
+
+    // if (menuButton.mouse.pressed())
+    // location.replace("index.html");
 
 }

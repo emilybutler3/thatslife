@@ -24,15 +24,15 @@ function setup() {
     start.img = 'assets/start.png'
     
 
-    continueButton = new Sprite(475,height/2+200, 100,50);
+    continueButton = new Sprite(425,height/2-375, 100,50);
     continueButton.color = "#B3DFA1";
     continueButton.text = "get up";
 
-    bedButton = new Sprite(325,height/2+200, 100,50);
+    bedButton = new Sprite(325,height/2+275, 100,50);
     bedButton.color = "#F9E894 ";
     bedButton.text = "go back to bed";
 
-    giveupButton = new Sprite(400,height/2+275, 100,50);
+    giveupButton = new Sprite(475,height/2+275, 100,50);
     giveupButton.color = "#FF7780";
     giveupButton.text = "give up";
 
